@@ -54,6 +54,24 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid grey;
+  margin: 8px;
+  padding: 8px;
+  max-height: 75%;
+  max-width: 75%;
+}
+
+.product-list {
+  display: grid;
+  grid: auto auto auto / auto auto auto;
+  grid-gap: 8px;
+  padding: 8px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +82,12 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .product-list, .product-card {
+    width: 100%;
   }
 }

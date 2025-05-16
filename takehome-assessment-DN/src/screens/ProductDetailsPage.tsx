@@ -13,7 +13,7 @@ export const ProductDetailsPage = () => {
 		const fetchProduct = async () => {
 			try {
 				const response = await fetch(
-					`${TEST_API}${TEST_ENDPOINT}/:${params.id}`
+					`${TEST_API}${TEST_ENDPOINT}/${params.id}`
 				);
 				if (!response.ok) {
 					throw new Error(`Error Status: ${response.status}`);

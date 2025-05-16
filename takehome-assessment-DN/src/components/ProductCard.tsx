@@ -17,7 +17,7 @@ export type ProductCardProps = {
 export const ProductCard = ({product}: ProductCardProps) => {
     return (
         <>
-            <NavLink to={`/products/:${product.id}`}>
+            <NavLink to={`/products/${product.id}`}>
             <div className="product-card">
                 <img src={product.image} alt={product.description}></img>
                 <h1>{product.name}</h1>
@@ -36,7 +36,7 @@ export type ProductCardListProps = {
 export const ProductCardList = ({products}: ProductCardListProps) => {
     return (
         <div className="product-list">
-            {products.map((product) => <ProductCard product={product}/>)}
+            {products.map((product) => <ProductCard key={product.id} product={product}/>)}
         </div>
     )
 }
