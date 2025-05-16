@@ -1,15 +1,12 @@
-import type { imageURL } from "./ProductCard"
+import type { Product } from "./ProductCard"
 
 type ProductDetailsViewProps = {
-    name: string,
-    image: imageURL,
-    description: string,
-    price: number
+    product: Product
 }
 
-const ProductDetailsView = () => {
+export const ProductDetailsView = ({product}: ProductDetailsViewProps) => {
     return (
-        
+        <h1>Product</h1>
     )
 }
 
