@@ -6,7 +6,12 @@ type ProductDetailsViewProps = {
 
 export const ProductDetailsView = ({product}: ProductDetailsViewProps) => {
     return (
-        <h1>Product</h1>
+        <div className="product-details">
+            <img src={product.image} alt={product.description}/>
+            <h1>{product.name}</h1>
+            <p>{product.description}</p>
+            <p>{product.price}</p>
+        </div>
     )
 }
 
