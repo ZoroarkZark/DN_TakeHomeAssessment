@@ -1,3 +1,5 @@
+import { NavLink } from "react-router"
+
 export type imageURL = string
 
 export type Product = {
@@ -14,9 +16,16 @@ export type ProductCardProps = {
 
 export const ProductCard = ({product}: ProductCardProps) => {
     return (
-        <div className="product-card">
-            <img src={product.image} alt={product.description}></img>
-        </div>
+        <>
+            <NavLink to={`/products/:${product.id}`}>
+            <div className="product-card">
+                <img src={product.image} alt={product.description}></img>
+                <h1>{product.name}</h1>
+                <p>{product.description}</p>
+                <p>{product.price}</p>
+            </div>
+            </NavLink>
+        </>
     )   
 }
 
