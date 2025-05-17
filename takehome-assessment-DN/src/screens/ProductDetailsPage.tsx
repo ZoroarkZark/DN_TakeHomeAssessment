@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import type { Product } from "../components/ProductCard";
 import { ProductDetailsView } from "../components/ProductDetails";
-import { ShopHeader } from "../components/ShopHeader";
 import { TEST_API, TEST_ENDPOINT } from "./ProductListPage";
 
 export const ProductDetailsPage = () => {
@@ -34,7 +33,6 @@ export const ProductDetailsPage = () => {
 				<p>Loading...</p>
 			) : (
                 <>
-			        <ShopHeader />
 				    <ProductDetailsView product={productData} />
                 </>
 			)}

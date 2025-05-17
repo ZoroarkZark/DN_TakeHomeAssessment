@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { ProductCardList, type Product } from "../components/ProductCard";
-import { ShopHeader } from "../components/ShopHeader";
 
 export const TEST_API = "https://cart-api.alexrodriguez.workers.dev";
 export const TEST_ENDPOINT = "/products";
@@ -28,7 +27,6 @@ export const ProductListPage = () => {
 
 	return (
 		<>
-			<ShopHeader />
 			{loading ? <p>Loading...</p> : <ProductCardList products={productData} />}
 		</>
 	);

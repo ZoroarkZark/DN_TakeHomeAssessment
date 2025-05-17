@@ -3,10 +3,12 @@ import './App.css';
 import { CartListPage } from './screens/CartPage';
 import { ProductDetailsPage } from './screens/ProductDetailsPage';
 import { ProductListPage } from './screens/ProductListPage';
+import { ShopHeader } from './components/ShopHeader';
 
 function App() {
   return (
     <BrowserRouter>
+      <ShopHeader />
       <Routes>
         <Route path="/" element={<ProductListPage />} />
         <Route path="/products/:id" element={<ProductDetailsPage />} />

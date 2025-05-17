@@ -19,10 +19,11 @@ export const ProductCard = ({product}: ProductCardProps) => {
         <>
             <NavLink to={`/products/${product.id}`}>
             <div className="product-card">
-                <img src={product.image} alt={product.description}></img>
-                <h1>{product.name}</h1>
-                <p>{product.description}</p>
-                <p>{product.price}</p>
+                <img className="product-image" src={product.image} alt={product.description}></img>
+                <div className="product-text">
+                    <h1 className="product-name">{product.name}</h1>
+                    <p className="product-price">${product.price}</p>
+                </div>
             </div>
             </NavLink>
         </>
