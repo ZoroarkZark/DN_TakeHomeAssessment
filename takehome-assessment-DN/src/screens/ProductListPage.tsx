@@ -20,7 +20,9 @@ export const ProductListPage = () => {
 				setProductData(json);
 				setLoading(false);
 			} catch (error) {
-				console.error(error.message);
+				if (error instanceof Error) {
+                    console.log(error.message)
+                }
 				setLoading(false);
 			}
 		};

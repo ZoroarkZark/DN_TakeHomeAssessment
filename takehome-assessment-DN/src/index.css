@@ -1,7 +1,7 @@
 :root {
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	color-scheme: light;
-	background-image: linear-gradient(top to bottom, red, yellow);
+	background-image: url("./assets/sky.png");
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -14,24 +14,30 @@ a {
 	text-decoration: inherit;
 }
 a:hover {
-	color: #535bf2;
+	color: #2b35ec;
 }
 
 .header {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	display: flex;
 	padding-left: 1rem;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	text-align: left;
-	font-size: 24px;
+	font-size: 3.5vh;
+  box-shadow: 4px 4px;
   background-color: rgba(231, 231, 231, 0.87);
 }
+
 
 .product-list-header {
   display: flex;
   flex-direction: row;
   align-items: center;
 	justify-content: center;
+  font-size: 2vh;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.87);
 }
 
 .product-list-title {
@@ -62,7 +68,6 @@ a:hover {
   display: flex;
 	flex-direction: column;
 	text-align: center;
-	border: 2px solid grey;
 	padding: 8px 8px 0px 8px;
   word-break: break-word;
 }
@@ -71,10 +76,30 @@ a:hover {
   font-size: 2vh;
   border: 0px;
   border-radius: 8px;
-  background-color: rgba(231, 231, 231, 0.87);
+  background-color: rgba(200, 200, 200, 0.87);
   font-weight: bold;
   margin-left: 5vh;
   padding: 1vh;
+}
+
+.category-filter:hover {
+  background-color: rgba(180, 180, 180, 0.87);
+}
+
+.back-button {
+  font-size: 2vh;
+  border: 0px;
+  border-radius: 8px;
+  background-color: rgba(32, 197, 10, 0.87);
+  font-weight: bold;
+  max-width: 20vh;
+  padding: 1.4vh;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.back-button:hover {
+  background-color: rgba(24, 145, 8, 0.87);
 }
 
 .product-name {
@@ -114,20 +139,34 @@ a:hover {
   display: flex;
   flex-direction: row;
   border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.87);
   align-items: center;
   justify-content: center;
+  box-shadow: 4px 4px;
   max-width: 50%;
+}
+
+.product-details-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.87);
+  align-items: center;
+  justify-content: left;
+  box-shadow: 4px 4px;
 }
 
 
 @media screen and (max-width: 920px) {
-	/* For mobile phones: */
 	.product-list {
 		display: grid;
 		grid: auto auto / auto auto;
 		align-items: center;
 		justify-content: center;
 	}
+  .product-details {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 620px) {
