@@ -7,10 +7,12 @@ type ProductDetailsViewProps = {
 export const ProductDetailsView = ({product}: ProductDetailsViewProps) => {
     return product ? (
         <div className="product-details">
-            <img src={product.image} alt={product.description}/>
-            <h1>{product.name}</h1>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
+            <img className="product-details-image" src={product.image} alt={product.description}/>
+            <div className="product-text">
+                    <h1 className="product-name">{product.name}</h1>
+                    <p className="product-description">{product.description}</p>
+                    <p className="product-price">${product.price}</p>
+            </div>
         </div>
     ) : "No such product exists!"
 }

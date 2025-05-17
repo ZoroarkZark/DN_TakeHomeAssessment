@@ -36,8 +36,27 @@ export type ProductCardListProps = {
 
 export const ProductCardList = ({products}: ProductCardListProps) => {
     return (
-        <div className="product-list">
-            {products.map((product) => <ProductCard key={product.id} product={product}/>)}
-        </div>
+        <>
+            <ProductCardListHeader/>
+            <div className="product-list">
+                {products.map((product) => <ProductCard key={product.id} product={product}/>)}
+            </div>
+        </>
+    )
+}
+
+export const ProductCardListHeader = () => {
+    return (
+        <>
+            <div className="product-list-header">
+                <h1 className="product-list-title">Our Products</h1>
+                <select name="filter" className="filter">
+                    <option value="All Categories">All Categories</option>
+                    <option value="Apparel">Apparel</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Electronics">Electronics</option>
+                </select>
+            </div>
+        </>
     )
 }
