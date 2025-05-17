@@ -80,7 +80,6 @@ export const ProductCardListDropdown = () => {
 			defaultValue="All Categories"
 			className="category-filter"
 			onChange={(e) => {
-				console.log(e.target.value);
 				setCategory(e.target.value);
 			}}
 		>
