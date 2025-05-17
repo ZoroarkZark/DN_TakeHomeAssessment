@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { CategoryContext } from "../components/CategoryContext";
 import { ProductCardList, type Product } from "../components/ProductCard";
 
 export const TEST_API = "https://cart-api.alexrodriguez.workers.dev";
 export const TEST_ENDPOINT = "/products";
 
 export const ProductListPage = () => {
+    const [selectedValue, setSelectedValue] = useState<string>("All Categories")
 	const [productData, setProductData] = useState<Product[]>([]);
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
@@ -27,7 +29,9 @@ export const ProductListPage = () => {
 
 	return (
 		<>
-			{loading ? <p>Loading...</p> : <ProductCardList products={productData} />}
+            <CategoryContext.Provider value={{category: selectedValue, setCategory: setSelectedValue}}>
+			    {loading ? <p>Loading...</p> : <ProductCardList products={productData} />}
+            </CategoryContext.Provider>
 		</>
 	);
 };

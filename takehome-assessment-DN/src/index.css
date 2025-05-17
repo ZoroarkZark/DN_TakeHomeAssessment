@@ -47,9 +47,7 @@ a:hover {
 	text-align: center;
   border-radius: 8px;
   background-color: #ffffff;
-	border: 2px solid grey;
-  max-width: 400px;
-  max-height: 400px;
+  box-shadow: 4px 4px;
 	margin: 8px;
   word-break: break-word;
 }
@@ -69,7 +67,7 @@ a:hover {
   word-break: break-word;
 }
 
-.filter {
+.category-filter {
   font-size: 2vh;
   border: 0px;
   border-radius: 8px;
