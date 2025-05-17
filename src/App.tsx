@@ -5,7 +5,7 @@ import { ProductListPage } from './screens/ProductListPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/DN_TakeHomeAssessment/'}>
       <ShopHeader />
       <Routes>
         <Route path="/" element={<ProductListPage />} />
